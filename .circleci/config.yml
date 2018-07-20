@@ -28,7 +28,7 @@ jobs:
     #   - run: sudo docker-php-ext-install gd
       
       - run: chmod -R 777 storage
-      - run: cp .env.circle .env
+      - run: cp .env.example .env
 
       # Download and cache dependencies
       # Composer
