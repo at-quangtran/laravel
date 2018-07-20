@@ -28,7 +28,7 @@ jobs:
     #   - run: sudo docker-php-ext-install gd
       
       - run: chmod -R 777 storage
-      - run: cp .env.circle .env
+      - run: cp .env.example .env
 
       # Download and cache dependencies
       # Composer
@@ -44,7 +44,6 @@ jobs:
           paths:
             - vendor
       
-      - run: php artisan migrate
       # run tests!
       - run: ./vendor/bin/phpcs -n --standard=phpcs.xml
       - run: ./vendor/bin/phpmd app text phpmd.xml
